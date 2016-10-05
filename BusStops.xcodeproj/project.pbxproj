@@ -16,6 +16,9 @@
 		8015F8561DA4E6CB00520D78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8015F8551DA4E6CB00520D78 /* Assets.xcassets */; };
 		8015F8591DA4E6CB00520D78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8015F8571DA4E6CB00520D78 /* LaunchScreen.storyboard */; };
 		8015F8641DA4E6CC00520D78 /* BusStopsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8015F8631DA4E6CC00520D78 /* BusStopsTests.m */; };
+		809B9ACB1DA4FA7F0094F2F7 /* BusListManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 809B9ACA1DA4FA7F0094F2F7 /* BusListManager.m */; };
+		809B9AD91DA509290094F2F7 /* MBusStop.m in Sources */ = {isa = PBXBuildFile; fileRef = 809B9AD81DA509290094F2F7 /* MBusStop.m */; };
+		809B9ADD1DA510400094F2F7 /* NSURLSession+Promise.m in Sources */ = {isa = PBXBuildFile; fileRef = 809B9ADC1DA510400094F2F7 /* NSURLSession+Promise.m */; };
 		975A2856BB1D6440D7BC26ED /* Pods_BusStopsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29FC86AEE1E6A8CDFFA9FA5 /* Pods_BusStopsTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -46,6 +49,13 @@
 		8015F85F1DA4E6CC00520D78 /* BusStopsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BusStopsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8015F8631DA4E6CC00520D78 /* BusStopsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BusStopsTests.m; sourceTree = "<group>"; };
 		8015F8651DA4E6CC00520D78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		809B9AC91DA4FA7F0094F2F7 /* BusListManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusListManager.h; sourceTree = "<group>"; };
+		809B9ACA1DA4FA7F0094F2F7 /* BusListManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusListManager.m; sourceTree = "<group>"; };
+		809B9AD61DA501940094F2F7 /* URLResources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = URLResources.h; path = ../URLResources.h; sourceTree = "<group>"; };
+		809B9AD71DA509290094F2F7 /* MBusStop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBusStop.h; sourceTree = "<group>"; };
+		809B9AD81DA509290094F2F7 /* MBusStop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBusStop.m; sourceTree = "<group>"; };
+		809B9ADB1DA510400094F2F7 /* NSURLSession+Promise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLSession+Promise.h"; sourceTree = "<group>"; };
+		809B9ADC1DA510400094F2F7 /* NSURLSession+Promise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLSession+Promise.m"; sourceTree = "<group>"; };
 		82C41FC4EE27E0CB01DC0569 /* Pods_BusStops.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BusStops.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B29FC86AEE1E6A8CDFFA9FA5 /* Pods_BusStopsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BusStopsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFFF03C01E336618DC6887A1 /* Pods-BusStopsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusStopsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BusStopsTests/Pods-BusStopsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -115,6 +125,7 @@
 		8015F8451DA4E6CB00520D78 /* BusStops */ = {
 			isa = PBXGroup;
 			children = (
+				809B9AC21DA4F9CB0094F2F7 /* Model */,
 				8015F8491DA4E6CB00520D78 /* AppDelegate.h */,
 				8015F84A1DA4E6CB00520D78 /* AppDelegate.m */,
 				8015F84C1DA4E6CB00520D78 /* ViewController.h */,
@@ -144,6 +155,28 @@
 				8015F8651DA4E6CC00520D78 /* Info.plist */,
 			);
 			path = BusStopsTests;
+			sourceTree = "<group>";
+		};
+		809B9AC21DA4F9CB0094F2F7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				809B9ACF1DA4FAB80094F2F7 /* DB */,
+				809B9AD61DA501940094F2F7 /* URLResources.h */,
+				809B9AC91DA4FA7F0094F2F7 /* BusListManager.h */,
+				809B9ACA1DA4FA7F0094F2F7 /* BusListManager.m */,
+				809B9ADB1DA510400094F2F7 /* NSURLSession+Promise.h */,
+				809B9ADC1DA510400094F2F7 /* NSURLSession+Promise.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		809B9ACF1DA4FAB80094F2F7 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				809B9AD71DA509290094F2F7 /* MBusStop.h */,
+				809B9AD81DA509290094F2F7 /* MBusStop.m */,
+			);
+			path = DB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,7 +378,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				809B9ACB1DA4FA7F0094F2F7 /* BusListManager.m in Sources */,
+				809B9ADD1DA510400094F2F7 /* NSURLSession+Promise.m in Sources */,
 				8015F8541DA4E6CB00520D78 /* BusStops.xcdatamodeld in Sources */,
+				809B9AD91DA509290094F2F7 /* MBusStop.m in Sources */,
 				8015F84E1DA4E6CB00520D78 /* ViewController.m in Sources */,
 				8015F84B1DA4E6CB00520D78 /* AppDelegate.m in Sources */,
 				8015F8481DA4E6CB00520D78 /* main.m in Sources */,
