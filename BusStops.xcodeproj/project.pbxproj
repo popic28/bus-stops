@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C9029F9B10C35259EFE8AB1 /* Pods_BusStops.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C41FC4EE27E0CB01DC0569 /* Pods_BusStops.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		8015F8481DA4E6CB00520D78 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8015F8471DA4E6CB00520D78 /* main.m */; };
 		8015F84B1DA4E6CB00520D78 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8015F84A1DA4E6CB00520D78 /* AppDelegate.m */; };
 		8015F84E1DA4E6CB00520D78 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8015F84D1DA4E6CB00520D78 /* ViewController.m */; };
@@ -15,6 +16,7 @@
 		8015F8561DA4E6CB00520D78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8015F8551DA4E6CB00520D78 /* Assets.xcassets */; };
 		8015F8591DA4E6CB00520D78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8015F8571DA4E6CB00520D78 /* LaunchScreen.storyboard */; };
 		8015F8641DA4E6CC00520D78 /* BusStopsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8015F8631DA4E6CC00520D78 /* BusStopsTests.m */; };
+		975A2856BB1D6440D7BC26ED /* Pods_BusStopsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29FC86AEE1E6A8CDFFA9FA5 /* Pods_BusStopsTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09FF15C6EC81E99EFAB34B3A /* Pods-BusStopsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusStopsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BusStopsTests/Pods-BusStopsTests.release.xcconfig"; sourceTree = "<group>"; };
+		4E2800D5BAA06008376F5871 /* Pods-BusStops.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusStops.release.xcconfig"; path = "Pods/Target Support Files/Pods-BusStops/Pods-BusStops.release.xcconfig"; sourceTree = "<group>"; };
 		8015F8431DA4E6CB00520D78 /* BusStops.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusStops.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8015F8471DA4E6CB00520D78 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8015F8491DA4E6CB00520D78 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -42,6 +46,10 @@
 		8015F85F1DA4E6CC00520D78 /* BusStopsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BusStopsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8015F8631DA4E6CC00520D78 /* BusStopsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BusStopsTests.m; sourceTree = "<group>"; };
 		8015F8651DA4E6CC00520D78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82C41FC4EE27E0CB01DC0569 /* Pods_BusStops.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BusStops.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B29FC86AEE1E6A8CDFFA9FA5 /* Pods_BusStopsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BusStopsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFFF03C01E336618DC6887A1 /* Pods-BusStopsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusStopsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BusStopsTests/Pods-BusStopsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D2DFA5814DD27A70DC015AC8 /* Pods-BusStops.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusStops.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BusStops/Pods-BusStops.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C9029F9B10C35259EFE8AB1 /* Pods_BusStops.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,18 +65,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				975A2856BB1D6440D7BC26ED /* Pods_BusStopsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4CFFA11AE4D335ACDF213B8B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				82C41FC4EE27E0CB01DC0569 /* Pods_BusStops.framework */,
+				B29FC86AEE1E6A8CDFFA9FA5 /* Pods_BusStopsTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		62455C97F6B96B89DE4D34BD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D2DFA5814DD27A70DC015AC8 /* Pods-BusStops.debug.xcconfig */,
+				4E2800D5BAA06008376F5871 /* Pods-BusStops.release.xcconfig */,
+				BFFF03C01E336618DC6887A1 /* Pods-BusStopsTests.debug.xcconfig */,
+				09FF15C6EC81E99EFAB34B3A /* Pods-BusStopsTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8015F83A1DA4E6CB00520D78 = {
 			isa = PBXGroup;
 			children = (
 				8015F8451DA4E6CB00520D78 /* BusStops */,
 				8015F8621DA4E6CC00520D78 /* BusStopsTests */,
 				8015F8441DA4E6CB00520D78 /* Products */,
+				62455C97F6B96B89DE4D34BD /* Pods */,
+				4CFFA11AE4D335ACDF213B8B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,9 +153,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8015F8681DA4E6CC00520D78 /* Build configuration list for PBXNativeTarget "BusStops" */;
 			buildPhases = (
+				E3545CA787A87AE8FA443A9C /* Check Pods Manifest.lock */,
 				8015F83F1DA4E6CB00520D78 /* Sources */,
 				8015F8401DA4E6CB00520D78 /* Frameworks */,
 				8015F8411DA4E6CB00520D78 /* Resources */,
+				2EBC10B8DD7FE2E2E06555B7 /* Embed Pods Frameworks */,
+				4850B56EC5EAEFF84F431650 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -138,9 +173,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8015F86B1DA4E6CC00520D78 /* Build configuration list for PBXNativeTarget "BusStopsTests" */;
 			buildPhases = (
+				9A0CBDB02904A325990C1D15 /* Check Pods Manifest.lock */,
 				8015F85B1DA4E6CC00520D78 /* Sources */,
 				8015F85C1DA4E6CC00520D78 /* Frameworks */,
 				8015F85D1DA4E6CC00520D78 /* Resources */,
+				4BBE39E5099619EBBD38D000 /* Embed Pods Frameworks */,
+				176EA1FFE0C0C13F3214F0EE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -208,6 +246,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		176EA1FFE0C0C13F3214F0EE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BusStopsTests/Pods-BusStopsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2EBC10B8DD7FE2E2E06555B7 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BusStops/Pods-BusStops-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4850B56EC5EAEFF84F431650 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BusStops/Pods-BusStops-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4BBE39E5099619EBBD38D000 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BusStopsTests/Pods-BusStopsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A0CBDB02904A325990C1D15 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E3545CA787A87AE8FA443A9C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8015F83F1DA4E6CB00520D78 /* Sources */ = {
@@ -345,8 +476,10 @@
 		};
 		8015F8691DA4E6CC00520D78 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2DFA5814DD27A70DC015AC8 /* Pods-BusStops.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = BusStops/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = FP.BusStops;
@@ -356,8 +489,10 @@
 		};
 		8015F86A1DA4E6CC00520D78 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E2800D5BAA06008376F5871 /* Pods-BusStops.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = BusStops/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = FP.BusStops;
@@ -367,6 +502,7 @@
 		};
 		8015F86C1DA4E6CC00520D78 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFFF03C01E336618DC6887A1 /* Pods-BusStopsTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = BusStopsTests/Info.plist;
@@ -379,6 +515,7 @@
 		};
 		8015F86D1DA4E6CC00520D78 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09FF15C6EC81E99EFAB34B3A /* Pods-BusStopsTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = BusStopsTests/Info.plist;
@@ -408,6 +545,7 @@
 				8015F86A1DA4E6CC00520D78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8015F86B1DA4E6CC00520D78 /* Build configuration list for PBXNativeTarget "BusStopsTests" */ = {
 			isa = XCConfigurationList;
@@ -416,6 +554,7 @@
 				8015F86D1DA4E6CC00520D78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
