@@ -12,4 +12,8 @@
 
 + (NSString *)kBUS_API_URL;
 
++ (NSString *)kMaps_API_URL;
++ (NSString *)kMaps_API_KEY;
++ (NSDictionary *)kMaps_DefaultParams;
+
 @end

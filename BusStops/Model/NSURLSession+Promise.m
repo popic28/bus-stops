@@ -8,6 +8,7 @@
 
 #import "NSURLSession+Promise.h"
 #import <PromiseKit/PromiseKit.h>
+#import <OMGHTTPURLRQ/OMGHTTPURLRQ.h>
 
 @implementation NSURLSession (Promise)
 
@@ -34,5 +35,13 @@
     }];
 }
 
++ (AnyPromise *)downloadPromiseWithRequest:(NSURLRequest *)request
+{
+    NSURLSessionDownloadTask *downloadTask = [[NSURLSession sharedSession] downloadTaskWithRequest:request];
+    [downloadTask resume];
+    
+    //TODO: vezi cum era cu downloads din proj trecute
+    return nil;
+}
 
 @end

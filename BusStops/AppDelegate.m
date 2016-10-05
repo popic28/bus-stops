@@ -7,16 +7,32 @@
 //
 
 #import "AppDelegate.h"
+#import "BusListManager.h"
+#import "BusETAGetter.h"
+#import "MBusStop.h"
+#import <PromiseKit/PromiseKit.h>
+
 
 @interface AppDelegate ()
-
 @end
+
 
 @implementation AppDelegate
 
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    
+    [[BusListManager sharedInstance] fetchBusListOfZaragoza].then(^(NSArray *busStops){
+    
+        MBusStop *firstStop = [busStops firstObject];
+        
+        return [BusETAGetter estimateArrivalsForBusStopWithID:firstStop.busID];
+        
+    }).then(^(NSArray *estimates){
+        
+        NSLog(@"%@",estimates);
+    });
+    
     return YES;
 }
 

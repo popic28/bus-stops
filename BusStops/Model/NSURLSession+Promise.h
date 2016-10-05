@@ -13,4 +13,6 @@
 
 + (AnyPromise *)dataPromiseWithURLString:(NSString *)urlString;
 
++ (AnyPromise *)downloadPromiseWithRequest:(NSURLRequest *)request;
+
 @end

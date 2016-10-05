@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 @class AnyPromise;
 
-@interface BusETARequest : NSObject
+@interface BusETAGetter : NSObject
 
 + (AnyPromise *)estimateArrivalsForBusStopWithID:(NSString *)busID;
 

@@ -6,7 +6,7 @@
 //  Copyright © 2016 Florin Popa. All rights reserved.
 //
 
-#import "BusETARequest.h"
+#import "BusETAGetter.h"
 
 #import "Constants.h"
 #import "MLineEstimate.h"
@@ -16,7 +16,7 @@
 #import <Mantle/Mantle.h>
 
 
-@implementation BusETARequest
+@implementation BusETAGetter
 
 + (AnyPromise *)estimateArrivalsForBusStopWithID:(NSString *)busID
 {
