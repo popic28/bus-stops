@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BusStop (CoreDataProperties)
 
+@property (nullable, nonatomic, retain) NSString *busID;
 @property (nullable, nonatomic, retain) NSString *title;
 @property (nullable, nonatomic, retain) NSString *subtitle;
 @property (nullable, nonatomic, retain) NSNumber *lat;

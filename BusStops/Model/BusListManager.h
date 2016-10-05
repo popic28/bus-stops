@@ -9,16 +9,13 @@
 #import <Foundation/Foundation.h>
 @class AnyPromise;
 
-
 extern NSString *const nBusListManagerDidReloadNotification;
+
 
 @interface BusListManager : NSObject
 
 + (instancetype)sharedInstance;
 
-
-
 - (AnyPromise *)fetchBusListOfZaragoza;
-
 
 @end

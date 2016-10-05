@@ -26,6 +26,7 @@
 		809B9AE01DA52D8C0094F2F7 /* MLineEstimate.m in Sources */ = {isa = PBXBuildFile; fileRef = 809B9ADF1DA52D8C0094F2F7 /* MLineEstimate.m */; };
 		809B9AE31DA532B70094F2F7 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 809B9AE21DA532B70094F2F7 /* Constants.m */; };
 		809B9AE61DA53C650094F2F7 /* ThumbnailGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 809B9AE51DA53C650094F2F7 /* ThumbnailGetter.m */; };
+		809B9AEE1DA553850094F2F7 /* BusListGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 809B9AED1DA553850094F2F7 /* BusListGetter.m */; };
 		975A2856BB1D6440D7BC26ED /* Pods_BusStopsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29FC86AEE1E6A8CDFFA9FA5 /* Pods_BusStopsTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,8 @@
 		809B9AE21DA532B70094F2F7 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		809B9AE41DA53C650094F2F7 /* ThumbnailGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThumbnailGetter.h; path = ../ThumbnailGetter.h; sourceTree = "<group>"; };
 		809B9AE51DA53C650094F2F7 /* ThumbnailGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThumbnailGetter.m; path = ../ThumbnailGetter.m; sourceTree = "<group>"; };
+		809B9AEC1DA553850094F2F7 /* BusListGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusListGetter.h; sourceTree = "<group>"; };
+		809B9AED1DA553850094F2F7 /* BusListGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusListGetter.m; sourceTree = "<group>"; };
 		82C41FC4EE27E0CB01DC0569 /* Pods_BusStops.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BusStops.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B29FC86AEE1E6A8CDFFA9FA5 /* Pods_BusStopsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BusStopsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFFF03C01E336618DC6887A1 /* Pods-BusStopsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusStopsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BusStopsTests/Pods-BusStopsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -208,6 +211,8 @@
 				809B9ACD1DA4FA950094F2F7 /* BusETAGetter.m */,
 				809B9AC91DA4FA7F0094F2F7 /* BusListManager.h */,
 				809B9ACA1DA4FA7F0094F2F7 /* BusListManager.m */,
+				809B9AEC1DA553850094F2F7 /* BusListGetter.h */,
+				809B9AED1DA553850094F2F7 /* BusListGetter.m */,
 			);
 			path = BusStops;
 			sourceTree = "<group>";
@@ -463,6 +468,7 @@
 				809B9AE61DA53C650094F2F7 /* ThumbnailGetter.m in Sources */,
 				809B9AD91DA509290094F2F7 /* MBusStop.m in Sources */,
 				8015F84E1DA4E6CB00520D78 /* ViewController.m in Sources */,
+				809B9AEE1DA553850094F2F7 /* BusListGetter.m in Sources */,
 				8015F84B1DA4E6CB00520D78 /* AppDelegate.m in Sources */,
 				8015F8481DA4E6CB00520D78 /* main.m in Sources */,
 			);

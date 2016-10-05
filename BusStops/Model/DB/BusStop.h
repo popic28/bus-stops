@@ -9,11 +9,15 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+
+@class MBusStop;
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BusStop : NSManagedObject
 
 // Insert code here to declare functionality of your managed object subclass
+
++ (instancetype)insertOrUpdateWithMBusStop:(MBusStop *)busStop;
 
 @end
 

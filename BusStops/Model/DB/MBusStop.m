@@ -7,6 +7,7 @@
 //
 
 #import "MBusStop.h"
+#import "BusStop.h"
 
 @implementation MBusStop
 
@@ -18,6 +19,19 @@
               @"lat"        : @"lat",
               @"lon"        : @"lon",
               @"lines"      : @"lines" };
+}
+
++ (instancetype)busStopWithDBBusStop:(BusStop *)busStop
+{
+    MBusStop *newBusStop = [[MBusStop alloc] init];
+    newBusStop.busID = busStop.busID;
+    newBusStop.title = busStop.title;
+    newBusStop.subtitle = busStop.subtitle;
+    newBusStop.lat = busStop.lat;
+    newBusStop.lon = busStop.lon;
+    newBusStop.lines = busStop.lines;
+    
+    return newBusStop;
 }
 
 @end

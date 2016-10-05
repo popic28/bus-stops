@@ -13,6 +13,7 @@
 
 @implementation BusStop (CoreDataProperties)
 
+@dynamic busID;
 @dynamic title;
 @dynamic subtitle;
 @dynamic lat;

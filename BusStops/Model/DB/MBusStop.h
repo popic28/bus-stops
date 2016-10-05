@@ -10,6 +10,7 @@
 
 #import <Mantle/Mantle.h>
 
+@class BusStop;
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MBusStop : MTLModel <MTLJSONSerializing>
@@ -20,6 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSNumber *lat;
 @property (nonatomic, copy) NSNumber *lon;
 @property (nonatomic, strong) NSArray <NSString *> *lines;
+
++ (instancetype)busStopWithDBBusStop:(BusStop *)busStop;
 
 @end
 

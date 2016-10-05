@@ -15,12 +15,12 @@
 #import <PromiseKit/PromiseKit.h>
 #import <Mantle/Mantle.h>
 
+NSString *const kLineEstimateJSONArrayKey = @"estimates";
 
 @implementation BusETAGetter
 
 + (AnyPromise *)estimateArrivalsForBusStopWithID:(NSString *)busID
 {
-    //TODO: maybe a fancy url composition ?
     NSString *urlStrWithBusID = [NSString stringWithFormat:@"%@/%@",[Constants kBUS_API_URL],busID];
     
     return [NSURLSession dataPromiseWithURLString:urlStrWithBusID]
@@ -32,7 +32,7 @@
             return parseError;
         }
         
-        NSArray *estimatesJSONArray = [jsonData objectForKey:@"estimates"];
+        NSArray *estimatesJSONArray = [jsonData objectForKey:kLineEstimateJSONArrayKey];
         
         return [self lineEstimatesFromLineEstimatesJsonArray:estimatesJSONArray];
     });
