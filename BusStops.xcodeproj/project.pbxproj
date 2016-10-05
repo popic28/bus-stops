@@ -17,8 +17,11 @@
 		8015F8591DA4E6CB00520D78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8015F8571DA4E6CB00520D78 /* LaunchScreen.storyboard */; };
 		8015F8641DA4E6CC00520D78 /* BusStopsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8015F8631DA4E6CC00520D78 /* BusStopsTests.m */; };
 		809B9ACB1DA4FA7F0094F2F7 /* BusListManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 809B9ACA1DA4FA7F0094F2F7 /* BusListManager.m */; };
+		809B9ACE1DA4FA950094F2F7 /* BusETARequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 809B9ACD1DA4FA950094F2F7 /* BusETARequest.m */; };
 		809B9AD91DA509290094F2F7 /* MBusStop.m in Sources */ = {isa = PBXBuildFile; fileRef = 809B9AD81DA509290094F2F7 /* MBusStop.m */; };
 		809B9ADD1DA510400094F2F7 /* NSURLSession+Promise.m in Sources */ = {isa = PBXBuildFile; fileRef = 809B9ADC1DA510400094F2F7 /* NSURLSession+Promise.m */; };
+		809B9AE01DA52D8C0094F2F7 /* MLineEstimate.m in Sources */ = {isa = PBXBuildFile; fileRef = 809B9ADF1DA52D8C0094F2F7 /* MLineEstimate.m */; };
+		809B9AE31DA532B70094F2F7 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 809B9AE21DA532B70094F2F7 /* Constants.m */; };
 		975A2856BB1D6440D7BC26ED /* Pods_BusStopsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29FC86AEE1E6A8CDFFA9FA5 /* Pods_BusStopsTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -51,11 +54,16 @@
 		8015F8651DA4E6CC00520D78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		809B9AC91DA4FA7F0094F2F7 /* BusListManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusListManager.h; sourceTree = "<group>"; };
 		809B9ACA1DA4FA7F0094F2F7 /* BusListManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusListManager.m; sourceTree = "<group>"; };
-		809B9AD61DA501940094F2F7 /* URLResources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = URLResources.h; path = ../URLResources.h; sourceTree = "<group>"; };
+		809B9ACC1DA4FA950094F2F7 /* BusETARequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusETARequest.h; sourceTree = "<group>"; };
+		809B9ACD1DA4FA950094F2F7 /* BusETARequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusETARequest.m; sourceTree = "<group>"; };
 		809B9AD71DA509290094F2F7 /* MBusStop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBusStop.h; sourceTree = "<group>"; };
 		809B9AD81DA509290094F2F7 /* MBusStop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBusStop.m; sourceTree = "<group>"; };
 		809B9ADB1DA510400094F2F7 /* NSURLSession+Promise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLSession+Promise.h"; sourceTree = "<group>"; };
 		809B9ADC1DA510400094F2F7 /* NSURLSession+Promise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLSession+Promise.m"; sourceTree = "<group>"; };
+		809B9ADE1DA52D8C0094F2F7 /* MLineEstimate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLineEstimate.h; sourceTree = "<group>"; };
+		809B9ADF1DA52D8C0094F2F7 /* MLineEstimate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLineEstimate.m; sourceTree = "<group>"; };
+		809B9AE11DA532B70094F2F7 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		809B9AE21DA532B70094F2F7 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		82C41FC4EE27E0CB01DC0569 /* Pods_BusStops.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BusStops.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B29FC86AEE1E6A8CDFFA9FA5 /* Pods_BusStopsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BusStopsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFFF03C01E336618DC6887A1 /* Pods-BusStopsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusStopsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BusStopsTests/Pods-BusStopsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -161,11 +169,14 @@
 			isa = PBXGroup;
 			children = (
 				809B9ACF1DA4FAB80094F2F7 /* DB */,
-				809B9AD61DA501940094F2F7 /* URLResources.h */,
 				809B9AC91DA4FA7F0094F2F7 /* BusListManager.h */,
 				809B9ACA1DA4FA7F0094F2F7 /* BusListManager.m */,
+				809B9ACC1DA4FA950094F2F7 /* BusETARequest.h */,
+				809B9ACD1DA4FA950094F2F7 /* BusETARequest.m */,
 				809B9ADB1DA510400094F2F7 /* NSURLSession+Promise.h */,
 				809B9ADC1DA510400094F2F7 /* NSURLSession+Promise.m */,
+				809B9AE11DA532B70094F2F7 /* Constants.h */,
+				809B9AE21DA532B70094F2F7 /* Constants.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -175,6 +186,8 @@
 			children = (
 				809B9AD71DA509290094F2F7 /* MBusStop.h */,
 				809B9AD81DA509290094F2F7 /* MBusStop.m */,
+				809B9ADE1DA52D8C0094F2F7 /* MLineEstimate.h */,
+				809B9ADF1DA52D8C0094F2F7 /* MLineEstimate.m */,
 			);
 			path = DB;
 			sourceTree = "<group>";
@@ -378,7 +391,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				809B9ACE1DA4FA950094F2F7 /* BusETARequest.m in Sources */,
 				809B9ACB1DA4FA7F0094F2F7 /* BusListManager.m in Sources */,
+				809B9AE01DA52D8C0094F2F7 /* MLineEstimate.m in Sources */,
 				809B9ADD1DA510400094F2F7 /* NSURLSession+Promise.m in Sources */,
 				8015F8541DA4E6CB00520D78 /* BusStops.xcdatamodeld in Sources */,
 				809B9AD91DA509290094F2F7 /* MBusStop.m in Sources */,

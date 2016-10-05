@@ -9,7 +9,7 @@
 #import "BusListManager.h"
 
 #import <PromiseKit/PromiseKit.h>
-#import "URLResources.h"
+#import "Constants.h"
 #import "NSURLSession+Promise.h"
 
 #import <Mantle/Mantle.h>
@@ -62,7 +62,7 @@ NSString *const nBusListManagerDidReloadNotification = @"BusListManagerDidReload
 #pragma mark - Networking -
 - (AnyPromise *)loadFromRemote
 {
-    return [NSURLSession dataPromiseWithURLString:kBusListURL].then(^id(NSData *data) {
+    return [NSURLSession dataPromiseWithURLString:[Constants kBUS_API_URL]].then(^id(NSData *data) {
         
         NSError *parseError = nil;
         NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:data options:0 error:&parseError];

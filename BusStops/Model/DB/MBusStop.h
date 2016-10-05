@@ -10,6 +10,8 @@
 
 #import <Mantle/Mantle.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MBusStop : MTLModel <MTLJSONSerializing>
 
 @property (nonatomic, copy) NSString *busID;
@@ -20,3 +22,5 @@
 @property (nonatomic, strong) NSArray <NSString *> *lines;
 
 @end
+
+NS_ASSUME_NONNULL_END
