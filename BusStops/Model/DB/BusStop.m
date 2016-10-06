@@ -7,7 +7,7 @@
 //
 
 #import "BusStop.h"
-#import "AppDelegate.h"
+#import "CoreDataManager.h"
 #import "MBusStop.h"
 #import "BusStop.h"
 
@@ -15,9 +15,7 @@
 
 + (instancetype)insertOrUpdateWithMBusStop:(MBusStop *)busStop
 {
-    NSManagedObjectContext *context = [(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
-    BusStop *newEntry = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([BusStop class])
-                                                      inManagedObjectContext:context];
+    BusStop *newEntry = (BusStop *)[[CoreDataManager sharedInstance] createNewObjectForEntity:[BusStop class]];
     newEntry.busID = busStop.busID;
     newEntry.title = busStop.title;
     newEntry.subtitle = busStop.subtitle;

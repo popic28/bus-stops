@@ -10,10 +10,17 @@
 
 @interface Constants : NSObject
 
++ (NSURL *)applicationDocumentsDirectory;
+
++ (NSString *)kErrorDomain;
+
 + (NSString *)kBUS_API_URL;
 
 + (NSString *)kMaps_API_URL;
 + (NSString *)kMaps_API_KEY;
 + (NSDictionary *)kMaps_DefaultParams;
+
++ (NSString *)kCoreDataModelName;
++ (NSString *)kCoreDataStore_URL;
 
 @end

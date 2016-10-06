@@ -9,6 +9,10 @@
 #import <Foundation/Foundation.h>
 @class AnyPromise;
 
+typedef NS_ENUM(NSUInteger, BusETAGetterErrorCode) {
+    BusETAGetterErrorCodeEmptyEstimates = 1
+};
+
 @interface BusETAGetter : NSObject
 
 + (AnyPromise *)estimateArrivalsForBusStopWithID:(NSString *)busID;

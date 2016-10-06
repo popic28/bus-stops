@@ -10,6 +10,16 @@
 
 @implementation Constants
 
++ (NSURL *)applicationDocumentsDirectory
+{
+    return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+}
+
++ (NSString *)kErrorDomain
+{
+    return @"error.BusStops";
+}
+
 + (NSString *)kBUS_API_URL
 {    
     return @"http://api.dndzgz.com/services/bus";
@@ -31,6 +41,16 @@
               @"scale": @(2),
               @"size" : @"640x640",
               @"maptype" : @"roadmap" };
+}
+
++ (NSString *)kCoreDataModelName
+{
+    return @"BusStops";
+}
+
++ (NSString *)kCoreDataStore_URL
+{
+    return @"BusStops.sqlite";
 }
 
 @end

@@ -8,7 +8,7 @@
 
 #import "BusListManager.h"
 
-#import "AppDelegate.h"
+#import "CoreDataManager.h"
 #import <PromiseKit/PromiseKit.h>
 
 #import <Mantle/Mantle.h>
@@ -71,10 +71,6 @@ NSString *const nBusListManagerDidReloadNotification = @"BusListManagerDidReload
         }];
         
         return [AnyPromise promiseWithValue:sortedEstimates];
-        
-    }).catch(^(NSError *error){
-        
-        return [AnyPromise promiseWithValue:nil];
     });
 }
 
@@ -115,10 +111,7 @@ NSString *const nBusListManagerDidReloadNotification = @"BusListManagerDidReload
     return [AnyPromise promiseWithResolverBlock:^(PMKResolver  _Nonnull resolve) {
         
         NSError *error = nil;
-        NSManagedObjectContext *context = [(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
-        
-        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:NSStringFromClass([BusStop class])];
-        NSArray *results = [context executeFetchRequest:fetchRequest error:&error];
+        NSArray *results = [[CoreDataManager sharedInstance] allObjectsForEntity:[BusStop class] error:&error];
         
         if (error)
         {
@@ -167,7 +160,7 @@ NSString *const nBusListManagerDidReloadNotification = @"BusListManagerDidReload
         BusStop __unused *persistingBusStop = [BusStop insertOrUpdateWithMBusStop:busStop];
     }
     
-    [[(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext] save:nil];
+    [[CoreDataManager sharedInstance] save];
 }
 
 #pragma mark - Mantle -

@@ -54,6 +54,10 @@
         self.busStopViewItems = viewItemsArray;
         
         [self.delegate viewModelDidUpdateAllItems];
+        
+    }).catch(^(NSError *error) {
+        
+        NSLog(@"error:%@",error);
     });
 }
 
@@ -79,6 +83,10 @@
             viewItem.thumbnail = image;
             
             [self.delegate viewModelDidUpdateItemAtIndex:[self.busStopViewItems indexOfObject:viewItem]];
+            
+        }).catch(^(NSError *error) {
+            
+            NSLog(@"error:%@",error);
         });
     }
     
@@ -97,14 +105,22 @@
         {
             return;
         }
-        
-        viewItem.nextBusDescription = [NSString stringWithFormat:@"%@ > %@\n   %lu min",
-                                       nextArrival.name,
-                                       nextArrival.direction,
-                                       [nextArrival.estimate unsignedIntegerValue]];
+        viewItem.nextBusDescription = [self arrivalDescriptionWithName:nextArrival.name
+                                                             direction:nextArrival.direction
+                                                                  time:[nextArrival.estimate unsignedIntegerValue]];
         
         [self.delegate viewModelDidUpdateItemAtIndex:[self.busStopViewItems indexOfObject:viewItem]];
+        
+    }).catch(^(NSError *error) {
+        
+        NSLog(@"error:%@",error);
     });
+}
+
+#pragma mark - Helpers -
+- (NSString *)arrivalDescriptionWithName:(NSString *)name direction:(NSString *)direction time:(NSUInteger)time
+{
+    return [NSString stringWithFormat:@"%@ > %@\n   %lu min",name,direction,time];
 }
 
 @end

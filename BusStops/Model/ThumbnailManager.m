@@ -13,19 +13,14 @@
 #import <UIKit/UIKit.h>
 #import <PromiseKit/PromiseKit.h>
 
-#import "AppDelegate.h"
+#import "Constants.h"
 
 @implementation ThumbnailManager
-
-+ (AppDelegate *)appDelegate
-{
-    return [[UIApplication sharedApplication] delegate];
-}
 
 + (AnyPromise *)busStopImageWithBusStop:(MBusStop *)busStop shouldCacheOnDisk:(BOOL)shouldCache
 {
     //check if image exists , saved with busID on disk
-    NSString *thumbnailPath = [[[[self appDelegate] applicationDocumentsDirectory] path] stringByAppendingPathComponent:busStop.busID];
+    NSString *thumbnailPath = [[[Constants applicationDocumentsDirectory] path] stringByAppendingPathComponent:busStop.busID];
     
     if ([[NSFileManager defaultManager] fileExistsAtPath:thumbnailPath])
     {
@@ -45,9 +40,6 @@
         [pngData writeToFile:thumbnailPath atomically:YES];
         
         return [AnyPromise promiseWithValue:image];
-    }).catch(^(NSError *error){
-        
-        NSLog(@"error:%@",error);
     });
 }
 

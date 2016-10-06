@@ -33,6 +33,11 @@ NSString *const kLineEstimateJSONArrayKey = @"estimates";
         }
         
         NSArray *estimatesJSONArray = [jsonData objectForKey:kLineEstimateJSONArrayKey];
+        if (estimatesJSONArray == nil)
+        {
+            parseError = [NSError errorWithDomain:[Constants kErrorDomain] code:BusETAGetterErrorCodeEmptyEstimates userInfo:nil];
+            return parseError;
+        }
         
         return [self lineEstimatesFromLineEstimatesJsonArray:estimatesJSONArray];
     });
