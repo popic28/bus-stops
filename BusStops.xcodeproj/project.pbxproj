@@ -31,6 +31,8 @@
 		809B9AFD1DA5635D0094F2F7 /* BusStopsViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 809B9AFC1DA5635D0094F2F7 /* BusStopsViewItem.m */; };
 		809B9AFF1DA6481F0094F2F7 /* GetterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 809B9AFE1DA6481F0094F2F7 /* GetterTests.m */; };
 		809B9B021DA657E40094F2F7 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 809B9B011DA657E40094F2F7 /* CoreDataManager.m */; };
+		809B9B041DA664F60094F2F7 /* CoreDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 809B9B031DA664F60094F2F7 /* CoreDataTests.m */; };
+		809B9B0B1DA668E20094F2F7 /* CoreDataManager+Testable.m in Sources */ = {isa = PBXBuildFile; fileRef = 809B9B0A1DA668E20094F2F7 /* CoreDataManager+Testable.m */; };
 		975A2856BB1D6440D7BC26ED /* Pods_BusStopsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29FC86AEE1E6A8CDFFA9FA5 /* Pods_BusStopsTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -92,6 +94,9 @@
 		809B9AFE1DA6481F0094F2F7 /* GetterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetterTests.m; sourceTree = "<group>"; };
 		809B9B001DA657E40094F2F7 /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
 		809B9B011DA657E40094F2F7 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
+		809B9B031DA664F60094F2F7 /* CoreDataTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTests.m; sourceTree = "<group>"; };
+		809B9B091DA668E20094F2F7 /* CoreDataManager+Testable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CoreDataManager+Testable.h"; sourceTree = "<group>"; };
+		809B9B0A1DA668E20094F2F7 /* CoreDataManager+Testable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CoreDataManager+Testable.m"; sourceTree = "<group>"; };
 		82C41FC4EE27E0CB01DC0569 /* Pods_BusStops.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BusStops.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B29FC86AEE1E6A8CDFFA9FA5 /* Pods_BusStopsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BusStopsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFFF03C01E336618DC6887A1 /* Pods-BusStopsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusStopsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BusStopsTests/Pods-BusStopsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -185,6 +190,9 @@
 			children = (
 				8015F8651DA4E6CC00520D78 /* Info.plist */,
 				809B9AFE1DA6481F0094F2F7 /* GetterTests.m */,
+				809B9B031DA664F60094F2F7 /* CoreDataTests.m */,
+				809B9B091DA668E20094F2F7 /* CoreDataManager+Testable.h */,
+				809B9B0A1DA668E20094F2F7 /* CoreDataManager+Testable.m */,
 			);
 			path = BusStopsTests;
 			sourceTree = "<group>";
@@ -520,6 +528,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				809B9B0B1DA668E20094F2F7 /* CoreDataManager+Testable.m in Sources */,
+				809B9B041DA664F60094F2F7 /* CoreDataTests.m in Sources */,
 				809B9AFF1DA6481F0094F2F7 /* GetterTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

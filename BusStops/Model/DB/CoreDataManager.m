@@ -14,6 +14,7 @@
 
 @interface CoreDataManager ()
 
+@property (copy,   nonatomic) NSString *storeType;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
@@ -77,6 +78,11 @@
     return _managedObjectModel;
 }
 
+- (NSString *)storeType
+{
+    return NSSQLiteStoreType;
+}
+
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinator
 {
     if (_persistentStoreCoordinator != nil)
@@ -89,7 +95,7 @@
     NSURL *storeURL = [[Constants applicationDocumentsDirectory] URLByAppendingPathComponent:[Constants kCoreDataStore_URL]];
     NSError *error = nil;
     NSString *failureReason = @"There was an error creating or loading the application's saved data.";
-    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error])
+    if (![_persistentStoreCoordinator addPersistentStoreWithType:self.storeType configuration:nil URL:storeURL options:nil error:&error])
     {
         NSMutableDictionary *dict = [NSMutableDictionary dictionary];
         dict[NSLocalizedDescriptionKey] = @"Failed to initialize the application's saved data";
