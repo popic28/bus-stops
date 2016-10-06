@@ -11,6 +11,7 @@
 #import "Constants.h"
 #import <OMGHTTPURLRQ/OMGHTTPURLRQ.h>
 #import "NSURLSession+Promise.h"
+#import <PromiseKit/PromiseKit.h>
 
 NSString *const kmapParamLatAndLon = @"center";
 NSString *const kmapParamAPIKEY = @"key";
@@ -29,6 +30,11 @@ NSString *const kmapParamAPIKEY = @"key";
     NSURLRequest *request = [OMGHTTPURLRQ GET:[Constants kMaps_API_URL]
                                              :params
                                         error:&error];
+    
+    if (error)
+    {
+        return [AnyPromise promiseWithValue:error];
+    }
     
     return [NSURLSession downloadPromiseWithRequest:request];
 }

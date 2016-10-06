@@ -18,8 +18,9 @@
     return [AnyPromise promiseWithResolverBlock:^(PMKResolver  _Nonnull resolve) {
         
         NSURLSessionDataTask *dataTask =
-        [[NSURLSession sharedSession] dataTaskWithURL:[NSURL URLWithString:urlString]
-                                    completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error)
+        [[NSURLSession sharedSession]
+         dataTaskWithURL:[NSURL URLWithString:urlString]
+         completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error)
          {
              if (error)
              {
@@ -41,8 +42,9 @@
     return [AnyPromise promiseWithResolverBlock:^(PMKResolver  _Nonnull resolve) {
     
         NSURLSessionDownloadTask *downloadTask =
-        [[NSURLSession sharedSession] downloadTaskWithRequest:request
-                                            completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error)
+        [[NSURLSession sharedSession]
+         downloadTaskWithRequest:request
+         completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error)
          {
              NSData *dataFromFile = [NSData dataWithContentsOfURL:location];
              

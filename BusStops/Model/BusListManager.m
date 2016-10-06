@@ -15,6 +15,7 @@
 #import "MBusStop.h"
 #import "MLineEstimate.h"
 #import "BusStop.h"
+
 #import "BusListGetter.h"
 #import "BusETAGetter.h"
 
@@ -61,7 +62,6 @@ NSString *const nBusListManagerDidReloadNotification = @"BusListManagerDidReload
         
         NSArray *sortedEstimates = [estimates sortedArrayUsingComparator:^NSComparisonResult(MLineEstimate *estimate1, MLineEstimate *estimate2)
         {
-            //TODO: find a better way to sanitize the input
             if (estimate1.estimate != nil && estimate2.estimate != nil)
             {
                 return [estimate1.estimate compare:estimate2.estimate];
@@ -71,10 +71,13 @@ NSString *const nBusListManagerDidReloadNotification = @"BusListManagerDidReload
         }];
         
         return [AnyPromise promiseWithValue:sortedEstimates];
+        
+    }).catch(^(NSError *error){
+        
+        return [AnyPromise promiseWithValue:nil];
     });
 }
 
-#pragma mark - Init -
 + (instancetype)sharedInstance
 {
     static BusListManager *busListManager = nil;
@@ -88,6 +91,7 @@ NSString *const nBusListManagerDidReloadNotification = @"BusListManagerDidReload
     return busListManager;
 }
 
+#pragma mark - Init -
 - (instancetype)init
 {
     self = [super init];
@@ -155,6 +159,17 @@ NSString *const nBusListManagerDidReloadNotification = @"BusListManagerDidReload
     });
 }
 
+#pragma mark - Saving -
+- (void)persistToStore
+{
+    for (MBusStop *busStop in self.busList)
+    {
+        BusStop __unused *persistingBusStop = [BusStop insertOrUpdateWithMBusStop:busStop];
+    }
+    
+    [[(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext] save:nil];
+}
+
 #pragma mark - Mantle -
 - (AnyPromise *)busStopsFromBusStopsJSONArray:(NSArray *)jsonArray
 {
@@ -172,17 +187,6 @@ NSString *const nBusListManagerDidReloadNotification = @"BusListManagerDidReload
             resolve(parsedList);
         }
     }];
-}
-
-#pragma mark - Saving -
-- (void)persistToStore
-{
-    for (MBusStop *busStop in self.busList)
-    {
-        BusStop __unused *persistingBusStop = [BusStop insertOrUpdateWithMBusStop:busStop];
-    }
-    
-    [[(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext] save:nil];
 }
 
 @end

@@ -93,8 +93,12 @@
     .then(^(NSArray <MLineEstimate *>*sortedEstimates) {
         
         MLineEstimate *nextArrival = [sortedEstimates firstObject];
+        if (nil == nextArrival)
+        {
+            return;
+        }
         
-        viewItem.nextBusDescription = [NSString stringWithFormat:@"(%@) %@\n   %lu min",
+        viewItem.nextBusDescription = [NSString stringWithFormat:@"%@ > %@\n   %lu min",
                                        nextArrival.name,
                                        nextArrival.direction,
                                        [nextArrival.estimate unsignedIntegerValue]];

@@ -18,18 +18,13 @@
 @end
 
 @protocol BusStopsViewModelDelegate <NSObject>
-
 - (void)viewModelDidUpdateItemAtIndex:(NSUInteger)index;
 - (void)viewModelDidUpdateAllItems;
-
 @end
 
 @protocol BusStopsViewModelProtocol <NSObject>
 @property (nonatomic, weak) id<BusStopsViewModelDelegate> delegate;
-
 - (NSUInteger)numberOfViewItems;
 - (id<BusStopViewItemProtocol>)viewItemAtIndex:(NSUInteger)index;
-
 - (void)fetchEstimatesForIndex:(NSUInteger)index;
-
 @end

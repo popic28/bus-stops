@@ -8,6 +8,8 @@
 
 #import <Mantle/Mantle.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MLineEstimate : MTLModel <MTLJSONSerializing>
 
 @property (nonnull, nonatomic, copy) NSString *name;
@@ -15,3 +17,5 @@
 @property (nonnull, nonatomic, copy) NSNumber *estimate;
 
 @end
+
+NS_ASSUME_NONNULL_END

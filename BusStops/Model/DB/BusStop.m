@@ -9,15 +9,14 @@
 #import "BusStop.h"
 #import "AppDelegate.h"
 #import "MBusStop.h"
+#import "BusStop.h"
 
 @implementation BusStop
 
-// Insert code here to add functionality to your managed object subclass
 + (instancetype)insertOrUpdateWithMBusStop:(MBusStop *)busStop
 {
-    //TODO: separate db layer out of app delegate and update here too
     NSManagedObjectContext *context = [(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
-    BusStop *newEntry = [NSEntityDescription insertNewObjectForEntityForName:@"BusStop"
+    BusStop *newEntry = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([BusStop class])
                                                       inManagedObjectContext:context];
     newEntry.busID = busStop.busID;
     newEntry.title = busStop.title;

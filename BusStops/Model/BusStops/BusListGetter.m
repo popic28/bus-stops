@@ -37,5 +37,4 @@ NSString *const kBusStopsArrayJSONKey = @"locations";
     return [busListDict objectForKey:kBusStopsArrayJSONKey];
 }
 
-
 @end
