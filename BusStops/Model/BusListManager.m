@@ -13,8 +13,10 @@
 
 #import <Mantle/Mantle.h>
 #import "MBusStop.h"
+#import "MLineEstimate.h"
 #import "BusStop.h"
 #import "BusListGetter.h"
+#import "BusETAGetter.h"
 
 
 NSString *const nBusListManagerDidReloadNotification = @"BusListManagerDidReloadNotification";
@@ -46,6 +48,30 @@ NSString *const nBusListManagerDidReloadNotification = @"BusListManagerDidReload
             return [AnyPromise promiseWithValue:self.busList];
         });
     }
+}
+
+- (AnyPromise *)arrivalsForBusStopWithID:(NSString *)busID;
+{
+    return [BusETAGetter estimateArrivalsForBusStopWithID:busID].then(^(NSArray <MLineEstimate *> *estimates){
+    
+        if ([estimates count] == 1)
+        {
+            return [AnyPromise promiseWithValue:estimates];
+        }
+        
+        NSArray *sortedEstimates = [estimates sortedArrayUsingComparator:^NSComparisonResult(MLineEstimate *estimate1, MLineEstimate *estimate2)
+        {
+            //TODO: find a better way to sanitize the input
+            if (estimate1.estimate != nil && estimate2.estimate != nil)
+            {
+                return [estimate1.estimate compare:estimate2.estimate];
+            }
+            
+            return NSOrderedAscending;
+        }];
+        
+        return [AnyPromise promiseWithValue:sortedEstimates];
+    });
 }
 
 #pragma mark - Init -

@@ -17,5 +17,6 @@ extern NSString *const nBusListManagerDidReloadNotification;
 + (instancetype)sharedInstance;
 
 - (AnyPromise *)fetchBusListOfZaragoza;
+- (AnyPromise *)arrivalsForBusStopWithID:(NSString *)busID;
 
 @end
