@@ -9,6 +9,7 @@
 #import "NSURLSession+Promise.h"
 #import <PromiseKit/PromiseKit.h>
 #import <OMGHTTPURLRQ/OMGHTTPURLRQ.h>
+#import <UIKit/UIKit.h>
 
 @implementation NSURLSession (Promise)
 
@@ -37,11 +38,21 @@
 
 + (AnyPromise *)downloadPromiseWithRequest:(NSURLRequest *)request
 {
-    NSURLSessionDownloadTask *downloadTask = [[NSURLSession sharedSession] downloadTaskWithRequest:request];
-    [downloadTask resume];
+    return [AnyPromise promiseWithResolverBlock:^(PMKResolver  _Nonnull resolve) {
     
-    //TODO: vezi cum era cu downloads din proj trecute
-    return nil;
+        NSURLSessionDownloadTask *downloadTask =
+        [[NSURLSession sharedSession] downloadTaskWithRequest:request
+                                            completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error)
+         {
+             NSData *dataFromFile = [NSData dataWithContentsOfURL:location];
+             
+             UIImage *image = [UIImage imageWithData:dataFromFile];
+             
+             resolve(image);
+         }];
+        
+        [downloadTask resume];
+    }];
 }
 
 @end

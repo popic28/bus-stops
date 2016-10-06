@@ -12,8 +12,7 @@
 #import <OMGHTTPURLRQ/OMGHTTPURLRQ.h>
 #import "NSURLSession+Promise.h"
 
-NSString *const kmapParamLat = @"lat";
-NSString *const kmapParamLon = @"lon";
+NSString *const kmapParamLatAndLon = @"center";
 NSString *const kmapParamAPIKEY = @"key";
 
 @implementation ThumbnailGetter
@@ -24,11 +23,10 @@ NSString *const kmapParamAPIKEY = @"key";
     
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:[Constants kMaps_DefaultParams]];
     
-    [params setObject:lat forKey:kmapParamLat];
-    [params setObject:lon forKey:kmapParamLon];
+    [params setObject:[NSString stringWithFormat:@"%@,%@",lat,lon] forKey:kmapParamLatAndLon];
     [params setObject:[Constants kMaps_API_KEY] forKey:kmapParamAPIKEY];
     
-    NSURLRequest *request = [OMGHTTPURLRQ GET:[Constants kBUS_API_URL]
+    NSURLRequest *request = [OMGHTTPURLRQ GET:[Constants kMaps_API_URL]
                                              :params
                                         error:&error];
     

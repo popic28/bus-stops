@@ -27,9 +27,9 @@
 
 + (NSDictionary *)kMaps_DefaultParams
 {
-    return @{ @"zoom" : @(12),
+    return @{ @"zoom" : @(18),
               @"scale": @(2),
-              @"size" : @"200x200",
+              @"size" : @"640x640",
               @"maptype" : @"roadmap" };
 }
 
