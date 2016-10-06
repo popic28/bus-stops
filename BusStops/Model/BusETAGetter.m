@@ -43,7 +43,7 @@ NSString *const kLineEstimateJSONArrayKey = @"estimates";
     });
 }
 
-+ (AnyPromise *)lineEstimatesFromLineEstimatesJsonArray:(NSArray *)jsonArray
++ (AnyPromise *)lineEstimatesFromLineEstimatesJsonArray:(NSArray <NSDictionary *>*)jsonArray
 {
     return [AnyPromise promiseWithResolverBlock:^(PMKResolver  _Nonnull resolve) {
         

@@ -25,7 +25,7 @@ NSString *const nBusListManagerDidReloadNotification = @"BusListManagerDidReload
 @interface BusListManager ()
 
 @property (nonatomic, assign)           BOOL refreshing;
-@property (nonnull, nonatomic, strong)  NSArray *busList;
+@property (nonnull, nonatomic, strong)  NSArray <MBusStop *>*busList;
 
 @end
 
@@ -99,7 +99,7 @@ NSString *const nBusListManagerDidReloadNotification = @"BusListManagerDidReload
     return self;
 }
 
-- (void)setBusList:(NSArray *)busList
+- (void)setBusList:(NSArray <MBusStop *>*)busList
 {
     _busList = busList;
     [[NSNotificationCenter defaultCenter] postNotificationName:nBusListManagerDidReloadNotification object:nil];
@@ -133,10 +133,10 @@ NSString *const nBusListManagerDidReloadNotification = @"BusListManagerDidReload
 
 - (AnyPromise *)loadFromRemote
 {
-    return [BusListGetter busStopsArray].then(^(NSArray *jsonArray){
+    return [BusListGetter busStopsArray].then(^(NSArray <NSDictionary *>*jsonArray){
         
         return [self busStopsFromBusStopsJSONArray:jsonArray];
-    }).then(^(NSArray *busStops){
+    }).then(^(NSArray <MBusStop *>*busStops){
         
         self.busList = busStops;
     });
@@ -145,7 +145,7 @@ NSString *const nBusListManagerDidReloadNotification = @"BusListManagerDidReload
 - (void)refreshFromRemote
 {
     self.refreshing = YES;
-    [self loadFromRemote].then(^(NSArray *busStops){
+    [self loadFromRemote].then(^(NSArray <MBusStop *>*busStops){
         
         [self persistToStore];
         self.refreshing = NO;
@@ -164,7 +164,7 @@ NSString *const nBusListManagerDidReloadNotification = @"BusListManagerDidReload
 }
 
 #pragma mark - Mantle -
-- (AnyPromise *)busStopsFromBusStopsJSONArray:(NSArray *)jsonArray
+- (AnyPromise *)busStopsFromBusStopsJSONArray:(NSArray <NSDictionary *>*)jsonArray
 {
     return [AnyPromise promiseWithResolverBlock:^(PMKResolver  _Nonnull resolve) {
         

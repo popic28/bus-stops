@@ -28,7 +28,6 @@
     return YES;
 }
 
-
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     [[CoreDataManager sharedInstance] save];

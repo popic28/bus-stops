@@ -18,6 +18,5 @@
 @dynamic subtitle;
 @dynamic lat;
 @dynamic lon;
-@dynamic lines;
 
 @end

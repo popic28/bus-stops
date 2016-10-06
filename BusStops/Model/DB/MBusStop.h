@@ -20,7 +20,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *subtitle;
 @property (nonatomic, copy) NSNumber *lat;
 @property (nonatomic, copy) NSNumber *lon;
-@property (nonatomic, strong) NSArray <NSString *> *lines;
 
 + (instancetype)busStopWithDBBusStop:(BusStop *)busStop;
 

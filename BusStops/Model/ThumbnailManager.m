@@ -19,7 +19,6 @@
 
 + (AnyPromise *)busStopImageWithBusStop:(MBusStop *)busStop shouldCacheOnDisk:(BOOL)shouldCache
 {
-    //check if image exists , saved with busID on disk
     NSString *thumbnailPath = [[[Constants applicationDocumentsDirectory] path] stringByAppendingPathComponent:busStop.busID];
     
     if ([[NSFileManager defaultManager] fileExistsAtPath:thumbnailPath])

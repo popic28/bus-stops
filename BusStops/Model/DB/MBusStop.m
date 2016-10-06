@@ -17,8 +17,7 @@
               @"title"      : @"title",
               @"subtitle"   : @"subtitle",
               @"lat"        : @"lat",
-              @"lon"        : @"lon",
-              @"lines"      : @"lines" };
+              @"lon"        : @"lon" };
 }
 
 + (instancetype)busStopWithDBBusStop:(BusStop *)busStop
@@ -29,7 +28,6 @@
     newBusStop.subtitle = busStop.subtitle;
     newBusStop.lat = busStop.lat;
     newBusStop.lon = busStop.lon;
-    newBusStop.lines = busStop.lines;
     
     return newBusStop;
 }

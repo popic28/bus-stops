@@ -20,7 +20,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) NSString *subtitle;
 @property (nullable, nonatomic, retain) NSNumber *lat;
 @property (nullable, nonatomic, retain) NSNumber *lon;
-@property (nullable, nonatomic, retain) NSArray  *lines;
 
 @end
 

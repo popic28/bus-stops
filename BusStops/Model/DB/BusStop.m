@@ -21,7 +21,6 @@
     newEntry.subtitle = busStop.subtitle;
     newEntry.lat = busStop.lat;
     newEntry.lon = busStop.lon;
-    newEntry.lines = busStop.lines;
     
     return newEntry;
 }
