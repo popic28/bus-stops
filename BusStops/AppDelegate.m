@@ -12,8 +12,11 @@
 #import "MBusStop.h"
 #import <PromiseKit/PromiseKit.h>
 
+#import "BusListViewController.h"
+#import "BusStopsViewModel.h"
 
 @interface AppDelegate ()
+@property (nonnull, nonatomic, strong) BusStopsViewModel *viewModel;
 @end
 
 
@@ -21,17 +24,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.viewModel = [[BusStopsViewModel alloc] init];
     
-    [[BusListManager sharedInstance] fetchBusListOfZaragoza].then(^(NSArray *busStops){
-    
-        MBusStop *firstStop = [busStops firstObject];
-        
-        return [BusETAGetter estimateArrivalsForBusStopWithID:firstStop.busID];
-        
-    }).then(^(NSArray *estimates){
-        
-        NSLog(@"%@",estimates);
-    });
+    [(BusListViewController *)self.window.rootViewController connectViewModel:self.viewModel];
     
     return YES;
 }

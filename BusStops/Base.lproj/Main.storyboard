@@ -1,26 +1,103 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pXG-W8-sza">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Bus List View Controller-->
+        <scene sceneID="Cyy-Rs-X1W">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController id="pXG-W8-sza" customClass="BusListViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="220" sectionHeaderHeight="28" sectionFooterHeight="28" id="msf-p9-pBx">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BusStopReuseID" rowHeight="220" id="SSn-mK-JDF" customClass="BusStopTableViewCell">
+                                <rect key="frame" x="0.0" y="28" width="600" height="220"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SSn-mK-JDF" id="0r8-9w-ZuL">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="219.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uha-Aa-Xe0">
+                                            <rect key="frame" x="464" y="90" width="120" height="120"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="120" id="mla-m4-e0L"/>
+                                                <constraint firstAttribute="width" constant="120" id="tpj-nm-XDU"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJL-3y-PoY">
+                                            <rect key="frame" x="26" y="26" width="35" height="19.5"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u6O-9k-PRr">
+                                            <rect key="frame" x="26" y="53.5" width="50" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C1(BUS Destination) 15 min" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1JF-S5-dsD">
+                                            <rect key="frame" x="26" y="190.5" width="198.5" height="19.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="641" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LbV-B3-pPn">
+                                            <rect key="frame" x="537" y="50.5" width="47" height="31.5"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="uha-Aa-Xe0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1JF-S5-dsD" secondAttribute="trailing" constant="8" id="45L-05-3u0"/>
+                                        <constraint firstItem="uha-Aa-Xe0" firstAttribute="top" secondItem="LbV-B3-pPn" secondAttribute="bottom" constant="8" id="8v6-B3-Ddf"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="uha-Aa-Xe0" secondAttribute="trailing" constant="8" id="9Ig-rh-a9P"/>
+                                        <constraint firstItem="1JF-S5-dsD" firstAttribute="leading" secondItem="LbV-B3-pPn" secondAttribute="leading" id="9Ll-I2-4gX"/>
+                                        <constraint firstItem="LbV-B3-pPn" firstAttribute="leading" secondItem="0r8-9w-ZuL" secondAttribute="leadingMargin" constant="18" id="HtY-fz-Ulh"/>
+                                        <constraint firstItem="uha-Aa-Xe0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="u6O-9k-PRr" secondAttribute="trailing" constant="8" id="KP3-GH-PUW"/>
+                                        <constraint firstItem="LbV-B3-pPn" firstAttribute="trailing" secondItem="uha-Aa-Xe0" secondAttribute="trailing" id="RiJ-EG-6re"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="uha-Aa-Xe0" secondAttribute="bottom" constant="1.5" id="S7L-ce-wab"/>
+                                        <constraint firstItem="EJL-3y-PoY" firstAttribute="top" secondItem="0r8-9w-ZuL" secondAttribute="topMargin" constant="18" id="gOJ-RU-SqU"/>
+                                        <constraint firstItem="u6O-9k-PRr" firstAttribute="top" secondItem="EJL-3y-PoY" secondAttribute="bottom" constant="8" id="mpA-pL-0gO"/>
+                                        <constraint firstItem="u6O-9k-PRr" firstAttribute="leading" secondItem="EJL-3y-PoY" secondAttribute="leading" id="qGy-fr-B4M"/>
+                                        <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="EJL-3y-PoY" secondAttribute="trailing" constant="8" id="qy6-QO-EtV"/>
+                                        <constraint firstItem="EJL-3y-PoY" firstAttribute="leading" secondItem="0r8-9w-ZuL" secondAttribute="leadingMargin" constant="18" id="rN4-Wf-xnK"/>
+                                        <constraint firstItem="1JF-S5-dsD" firstAttribute="top" relation="greaterThanOrEqual" secondItem="u6O-9k-PRr" secondAttribute="bottom" constant="8" id="u4U-Fn-FcW"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="1JF-S5-dsD" secondAttribute="bottom" constant="1.5" id="y5V-Xn-FbE"/>
+                                        <constraint firstItem="1JF-S5-dsD" firstAttribute="leading" secondItem="u6O-9k-PRr" secondAttribute="leading" id="yqw-bh-c95"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="9Ll-I2-4gX"/>
+                                            <exclude reference="HtY-fz-Ulh"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="busStopIDLabel" destination="LbV-B3-pPn" id="tIT-Lo-yYt"/>
+                                    <outlet property="busStopNextBusLabel" destination="1JF-S5-dsD" id="Umr-eu-UsH"/>
+                                    <outlet property="busStopSubtitleLabel" destination="u6O-9k-PRr" id="Bxp-gA-EcO"/>
+                                    <outlet property="busStopThumbnail" destination="uha-Aa-Xe0" id="8LI-uQ-3fW"/>
+                                    <outlet property="busStopTitleLabel" destination="EJL-3y-PoY" id="xUZ-Kb-GmT"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="pXG-W8-sza" id="Nfh-D3-GzP"/>
+                            <outlet property="delegate" destination="pXG-W8-sza" id="Aq6-55-Jvy"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yQ1-1d-zoh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-240" y="115"/>
         </scene>
     </scenes>
 </document>
