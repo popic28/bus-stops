@@ -16,12 +16,14 @@ NSString *const kBusStopReuseID = @"BusStopReuseID";
 
 @interface BusListViewController () <BusStopsViewModelDelegate>
 
-@property (nonatomic, weak) id<BusStopsViewModelProtocol> viewModel;
 
+@property (nonatomic, weak) id<BusStopsViewModelProtocol> viewModel;
+@property (nonatomic, assign) BOOL viewDidAppear;
 @end
 
 
 @implementation BusListViewController
+
 
 - (void)viewDidLoad
 {
@@ -35,6 +37,7 @@ NSString *const kBusStopReuseID = @"BusStopReuseID";
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    self.viewDidAppear = YES;
     
     NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:30 target:self selector:@selector(updateVisibleCells) userInfo:nil repeats:YES];
     [timer fire];
@@ -57,7 +60,10 @@ NSString *const kBusStopReuseID = @"BusStopReuseID";
 #pragma mark - BusStopsViewModelDelegate -
 - (void)viewModelDidUpdateAllItems
 {
-    [self.tableView reloadData];
+    if (self.viewDidAppear)
+    {
+        [self.tableView reloadData];
+    }
 }
 
 - (void)viewModelDidUpdateItemAtIndex:(NSUInteger)index

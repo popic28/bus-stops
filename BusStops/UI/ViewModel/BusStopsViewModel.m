@@ -32,6 +32,7 @@
     self = [super init];
     if (self)
     {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(busStopsDidUpdate) name:nBusListManagerDidReloadNotification object:nil];
         [self loadData];
     }
     
@@ -115,6 +116,12 @@
         
         NSLog(@"error:%@",error);
     });
+}
+
+#pragma mark - Notifications -
+- (void)busStopsDidUpdate
+{
+    [self loadData];
 }
 
 #pragma mark - Helpers -
